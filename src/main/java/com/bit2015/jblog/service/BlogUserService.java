@@ -21,6 +21,8 @@ public class BlogUserService {
 	public void join(BlogUserVo vo) {
 		blogUserDao.insert(vo);
 	}
+	
+	
 
 	public BlogUserVo login(BlogUserVo vo) { // 로그인
 		BlogUserVo userVo = blogUserDao.get(vo);

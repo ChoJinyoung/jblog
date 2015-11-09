@@ -18,9 +18,22 @@
    select  user_no as userNo, 
          user_id as userId, 
          user_name as userName,
-         password
+         password,
+         role
    from   blog_user
    where   user_id = #{userId} and password = #{password}
+   </select>
+   
+   
+   <select id="getByRole" resultType="String">
+   	  select
+   user_no as userNo, 
+         user_id as userId, 
+         user_name as userName,
+         password,
+         role
+   from   blog_user
+   where role=#{role }
    </select>
    
 </mapper>

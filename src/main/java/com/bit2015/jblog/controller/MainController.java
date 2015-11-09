@@ -21,7 +21,7 @@ public class MainController {
 	BlogUserService blogUserService;
 
 	@RequestMapping("")
-	public String indexform() {
+	public String indexform(Model model,@ModelAttribute BlogUserVo vo) {
 		return "/main/index";
 	}
 
@@ -33,7 +33,6 @@ public class MainController {
 	@RequestMapping("/register")
 	public String register(@ModelAttribute BlogUserVo vo) {
 		blogUserService.join(vo);
-		System.out.println(vo);
 		return "redirect:/main/userlistform";
 	}
 
@@ -55,7 +54,6 @@ public class MainController {
 			return "redirect:/user/login-form?result=error";
 		}
 		session.setAttribute("authUser", userVo);
-		System.out.println(userVo);
 		return "/main/index";
 	}
 

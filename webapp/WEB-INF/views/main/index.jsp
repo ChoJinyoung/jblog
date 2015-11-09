@@ -16,20 +16,21 @@
 	<form action="#">
 		<table class="main-tbl">
 			<tr>
-				<td height="30">
-				<c:choose>
+				<td height="30"><c:choose>
 						<c:when test="${empty authUser}">
 							<a href="/jblog/main/loginform"><strong>로그인</strong></a>
            		&nbsp;&nbsp;
            		</c:when>
 						<c:otherwise>
 							<a href="/jblog/main/logout"><strong>로그아웃</strong></a> &nbsp;&nbsp;
+							<a href="/jblog/blog"><strong>내 블로그 가기</strong></a> &nbsp;&nbsp; 
+							
 						</c:otherwise>
-
 					</c:choose>
-					<a href="/jblog/blog"><strong>내 블로그 가기</strong></a> &nbsp;&nbsp; <a
-					href="/jblog/main/userlistform"><strong>관리자</strong></a>
-					&nbsp;&nbsp;</td>
+					<c:if test="${vo.role }=='Admin'">
+								<a href="/jblog/main/userlistform"><strong>관리자</strong></a>&nbsp;&nbsp;
+					</c:if>
+					</td>
 			</tr>
 			<tr>
 				<td height="20"><input type="text" name="searchKeyword"
