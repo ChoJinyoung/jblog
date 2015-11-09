@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="post">
+   <!-- <select id="list" resultType="BlogVo">
+      select a.blog_no as a.blogNo,
+      b.user_no as userNo
+      a.title, a.tag, a.cnt_display_post as cntDisplayPost,
+      a.status, a.file_name as fileName
+      from blog a,blog_user b
+      where a.blog_no=b.user_no
+      order by blog_no desc
+   </select> -->
+   
+   <select id="list" resultType="PostVo">
+      select a.post_no as postNo,
+      b.category_no as categoryNo,
+   a.title,a.content,a.created_date as createdDate,
+   a.modified_date as modifiedDate
+   from post a,category b
+   where 
+   a.post_no=b.category_no
+      order by blog_no desc
+   </select>  
+
+</mapper>
