@@ -22,16 +22,8 @@
 		      	<td width="530px" valign="top">
 			      	<!-- 포스트 시작 -->
 			      	<table>
-			      		<tr><td class="posttitle"><a href="">JavaOne 컨퍼런스가 열립니다.</a></td></tr>
+			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail">JavaOne 컨퍼런스가 열립니다.</a></td></tr>
 			      		<tr><td class="postdate">[2015/06/06] posted by kickscar, 덧글 1</td></tr>
-			      	</table>
-			      	<table>
-			      		<tr><td class="posttitle"><a href="">JBlog를 만듭시다</a></td></tr>
-			      		<tr><td class="postdate">[2015/06/10] posted by kickscar, 덧글 1</td></tr>
-			      	</table>
-			      	<table>
-			      		<tr><td class="posttitle"><a href="">Project Go! Go!</a></td></tr>
-			      		<tr><td class="postdate">[2015/06/23] posted by kickscar, 덧글 1</td></tr>
 			      	</table>
 			      	<!-- 포스트 끝-->      	
 		      	</td>

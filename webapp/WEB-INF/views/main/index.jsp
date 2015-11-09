@@ -27,7 +27,7 @@
 						</c:otherwise>
 
 					</c:choose>
-					<a href="/jblog/main/blogmain"><strong>내 블로그 가기</strong></a> &nbsp;&nbsp; <a
+					<a href="/jblog/blog"><strong>내 블로그 가기</strong></a> &nbsp;&nbsp; <a
 					href="/jblog/main/userlistform"><strong>관리자</strong></a>
 					&nbsp;&nbsp;</td>
 			</tr>

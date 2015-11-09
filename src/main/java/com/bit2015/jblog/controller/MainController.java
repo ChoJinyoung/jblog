@@ -25,13 +25,6 @@ public class MainController {
 		return "/main/index";
 	}
 
-	//fdgfhfgjgfkhjljp;'
-
-	@RequestMapping("/blogmain")
-	public String blogform() {
-		return "/blog/main";
-	}
-
 	@RequestMapping("/registerform")
 	public String registerform() {
 		return "/user/register-form";
