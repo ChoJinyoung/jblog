@@ -19,7 +19,7 @@ import com.bit2015.jblog.vo.BlogUserVo;
 public class MainController {
 	@Autowired
 	BlogUserService blogUserService;
-
+	
 	@RequestMapping("")
 	public String indexform() {
 		return "/main/index";

@@ -22,8 +22,6 @@ public class BlogUserService {
 		blogUserDao.insert(vo);
 	}
 	
-	
-
 	public BlogUserVo login(BlogUserVo vo) { // 로그인
 		BlogUserVo userVo = blogUserDao.get(vo);
 		return userVo;
