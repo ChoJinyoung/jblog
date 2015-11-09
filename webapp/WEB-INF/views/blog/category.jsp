@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,7 +15,7 @@
 			</p>
 			<ul>
 		      <li><a href="">로그아웃</a></li>
-		      <li><a href="">내 블로그 가기</a></li>
+		      <li><a href="/jblog/blog/">내 블로그 가기</a></li>
 		    </ul>  
 		</div>
 		<table class="content">
@@ -25,11 +24,11 @@
 	      	<td height="10" width="20">&nbsp;</td>
 	      	<td width="530" valign="top" class="tdcontent">
 		      	<!-- 메뉴 시작 -->     
-		      	<a class="title" href="">기본설정</a>
+		      	<a class="title" href="/jblog/blog/basic">기본설정</a>
 		      	&nbsp;&nbsp; 
 	    	  	<strong>카테고리</strong>
 	    	  	&nbsp;&nbsp;
-	      		<a class="title" href="">글작성</a>
+	      		<a class="title" href="/jblog/blog/writeform">글작성</a>
 	      		&nbsp;&nbsp;
 	      		<!-- 메뉴 끝 -->           	
 	      	</td> 

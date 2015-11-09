@@ -9,9 +9,9 @@ a:link, a:visited, a:active, a:hover { text-decoration:none }
 a.title:link,
 a.title:visited,
 a.title:active 		{ font-size:9pt; color:#696969; text-decoration:none }
-a.title:hover 		{ font-size:9pt; color:dc143c; text-decoration:none }
+a.title:hover 		{ font-size:9pt; color:#dc143c; text-decoration:none }
 
-.td					{ background-color:#FFFFFF; }
+.td					{ background-color:#FFFFFF;}
 .tdcontent			{ height:10px; }
 .tdcontentcenter	{ background-color:#FFFFFF; font-size:9pt; font-family:"Tahoma"; height:10px;text-align:center; }
 .tdcontentright		{ background-color:#FFFFFF; font-size:9pt; font-family:"Tahoma"; height:10px;text-align:right; }
@@ -19,7 +19,8 @@ a.title:hover 		{ font-size:9pt; color:dc143c; text-decoration:none }
 .blogtitle			{ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif; font-weight: bold; font-size:30pt; color:#FFFFFF;text-align:center; }
 .blogtag			{ font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;	font-size:9pt; color:#FFFFFF;text-align:center; }
 .blogfooter			{ font-size:9pt; font-family:"Tahoma"; height:10px;text-align:center; }							
-							
+
+.singlepost			{ width:80%; padding:5px; border-bottom: 1px solid #c0c0c0;}							
 .posttitle			{ font-size:14pt; color:#5A4EB1;font-weight: bold;height:24px; }
 .postdate			{ font-size:9pt; height:28px; }
 .postcontent		{ font-size:9pt; }

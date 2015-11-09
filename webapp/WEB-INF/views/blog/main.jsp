@@ -21,7 +21,7 @@
 		      	<td width="20px">&nbsp;</td>
 		      	<td width="530px" valign="top">
 			      	<!-- 포스트 시작 -->
-			      	<table>
+			      	<table class="singlepost">
 			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail">JavaOne 컨퍼런스가 열립니다.</a></td></tr>
 			      		<tr><td class="postdate">[2015/06/06] posted by kickscar, 덧글 1</td></tr>
 			      	</table>
@@ -35,7 +35,7 @@
 		      			<td>
 				      		<a href="/toLogin">로그인</a>&nbsp;&nbsp;
 				      		<a href="/logout">로그아웃</a>&nbsp;&nbsp;
-		   					<a href="/kickscar/admin">블로그 관리</a>
+		   					<a href="/jblog/blog/basic">블로그 관리</a>
 			      		</td>
 			      	</tr>
 		      		<tr><td height="5px">&nbsp;</td></tr>
