@@ -21,7 +21,7 @@ public class MainController {
 	BlogUserService blogUserService;
 
 	@RequestMapping("")
-	public String indexform(Model model,@ModelAttribute BlogUserVo vo) {
+	public String indexform() {
 		return "/main/index";
 	}
 
@@ -48,12 +48,13 @@ public class MainController {
 		return "/user/login-form";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(HttpSession session, @ModelAttribute BlogUserVo vo) {
+	public String login(HttpSession session, @ModelAttribute BlogUserVo vo, Model model) {
 		BlogUserVo userVo = blogUserService.login(vo);
 		if (userVo == null) {
 			return "redirect:/user/login-form?result=error";
 		}
 		session.setAttribute("authUser", userVo);
+		model.addAttribute("vo", userVo);
 		return "/main/index";
 	}
 
