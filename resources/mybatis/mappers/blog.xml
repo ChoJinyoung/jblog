@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="blog">
-	<select id="blogInfo"  resultType="BlogVo">
-		select blog_no as blogNo, 
-			   title,
-			   tag,
-			   cnt_display_post as cntDisplayPost,
-			   status,
-			   filename	
-		 from  blog	   
-	</select>
+   <select id="blogsetting" parameterType="BlogVo"  resultType="BlogVo">
+      select blog_no as blogNo, 
+            title,
+            tag,
+            cnt_display_post as cntDisplayPost,
+            status,
+            file_name as fileName   
+       from  blog      
+   </select>
 </mapper>

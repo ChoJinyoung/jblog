@@ -8,14 +8,13 @@ import com.bit2015.jblog.vo.BlogVo;
 
 @Repository
 public class BlogDao {
-	
+
 	@Autowired
 	SqlSession sqlsession;
-	
-	public BlogVo select(BlogVo vo){
-		BlogVo blogVo = sqlsession.selectOne("blog.blogInfo", vo);
-		System.out.println(vo);
+
+	public BlogVo select(BlogVo vo) {
+		BlogVo blogVo = sqlsession.selectOne("blog.blogsetting", vo);
 		return blogVo;
 	}
-	
+
 }

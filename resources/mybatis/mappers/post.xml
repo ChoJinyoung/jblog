@@ -17,4 +17,8 @@
                WHERE blogNo = B.BLOG_NO AND B.CATEGORY_NO = #{userNo}) C, POST D 
                WHERE C.CATEGORY_NO = D.CATEGORY_NO
 	</select>
+	
+	<insert id="">
+		
+	</insert>
 </mapper>
