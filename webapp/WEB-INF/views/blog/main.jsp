@@ -1,4 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ page 
+language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -22,8 +26,10 @@
 		      	<td width="530px" valign="top">
 			      	<!-- 포스트 시작 -->
 			      	<table class="singlepost">
-			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail">JavaOne 컨퍼런스가 열립니다.</a></td></tr>
-			      		<tr><td class="postdate">[2015/06/06] posted by kickscar, 덧글 1</td></tr>
+			      	<c:forEach items='${list }' var='vo' varStatus="status">
+			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail">${vo.title }</a></td></tr>
+			      		<tr><td class="postdate">[${vo.createdDate }] &&${vo.content }, 덧글 1</td></tr>
+			      	</c:forEach>
 			      	</table>
 			      	<!-- 포스트 끝-->      	
 		      	</td>

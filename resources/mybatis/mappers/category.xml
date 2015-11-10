@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="category">
+	<select id="list"  resultType="CategoryVo">
+		select user_no as userNo,user_id as userId,user_name as userName,
+			   role,password,created_date as createdDate,modified_date as modifiedDate
+		from blog a, user b,category c
+		order by created_date desc
+	</select>
+   
+</mapper>

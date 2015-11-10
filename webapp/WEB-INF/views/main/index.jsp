@@ -14,7 +14,7 @@
 <body>
 	<h1 class="s-logo">jBlog</h1>
 	<form action="#">
-		<table class="main-tbl">	
+		<table class="main-tbl">
 			<tr>
 				<td height="30">				
 				<c:choose>
@@ -25,7 +25,7 @@
 					<c:otherwise>
 						<a href="/jblog/main/logout"><strong>로그아웃</strong></a> 
 						&nbsp;&nbsp;
-						<a href="/jblog/blog"><strong>내 블로그 가기</strong></a> 
+						<a href="/jblog/blog/list?no=${vo.userNo }"><strong>내 블로그 가기</strong></a> 
 						&nbsp;&nbsp;
 						<c:if test="${vo.role == 'Admin'}">
 							<a href="/jblog/main/userlistform"><strong>관리자</strong></a>&nbsp;&nbsp;

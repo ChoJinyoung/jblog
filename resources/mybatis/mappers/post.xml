@@ -2,25 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="post">
-   <!-- <select id="list" resultType="BlogVo">
-      select a.blog_no as a.blogNo,
-      b.user_no as userNo
-      a.title, a.tag, a.cnt_display_post as cntDisplayPost,
-      a.status, a.file_name as fileName
-      from blog a,blog_user b
-      where a.blog_no=b.user_no
-      order by blog_no desc
-   </select> -->
    
-   <select id="list" resultType="PostVo">
-      select a.post_no as postNo,
-      b.category_no as categoryNo,
-   a.title,a.content,a.created_date as createdDate,
-   a.modified_date as modifiedDate
-   from post a,category b
-   where 
-   a.post_no=b.category_no
-      order by blog_no desc
+   <select id="list" parameterType="long" resultType="PostVo">
+      select C.USER_NAME as userName,
+		   TO_CHAR(D.MODIFIED_DATE,'yyyy/mm/dd') AS modifiedDate,
+		   D.POST_NO as postNo, 
+		   D.TITLE
+		   from 
+				(select A.*, B.CATEGORY_NO as categoryNo from 
+				(select b.BLOG_NO as blogNo, a.USER_NAME as userName 
+					from blog_user a, blog b where a.USER_NO = b.BLOG_NO) A,
+					CATEGORY B WHERE A.BLOG_NO = B.BLOG_NO AND B.CATEGORY_NO =#{categoryNo }) C,
+				POST D WHERE C.CATEGORY_NO = D.CATEGORY_NO
    </select>  
-
 </mapper>

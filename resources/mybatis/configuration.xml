@@ -4,12 +4,13 @@
       
    <typeAliases>
       <typeAlias type="com.bit2015.jblog.vo.BlogUserVo" alias="BlogUserVo" />
+      <typeAlias type="com.bit2015.jblog.vo.PostVo" alias="PostVo" />
     </typeAliases>   
       
       
    <mappers>
       <mapper resource="/mybatis/mappers/user.xml"/>
-      <!-- <mapper resource="/mybatis/mappers/post.xml"/> -->
+      <mapper resource="/mybatis/mappers/post.xml"/>
       
    </mappers>
 </configuration>
