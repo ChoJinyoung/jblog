@@ -51,7 +51,7 @@ public class MainController {
 	public String login(HttpSession session, @ModelAttribute BlogUserVo vo, Model model) {
 		BlogUserVo userVo = blogUserService.login(vo);
 		if (userVo == null) {
-			return "redirect:/user/login-form?result=error";
+			return "redirect:/main/loginform?result=error";
 		}
 		session.setAttribute("authUser", userVo);
 		model.addAttribute("vo", userVo);

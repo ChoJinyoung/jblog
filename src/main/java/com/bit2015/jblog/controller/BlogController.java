@@ -2,11 +2,13 @@ package com.bit2015.jblog.controller;
 
 import java.util.List;
 
+
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bit2015.jblog.service.BlogService;
 import com.bit2015.jblog.vo.PostVo;
@@ -15,15 +17,18 @@ import com.bit2015.jblog.vo.PostVo;
 @RequestMapping("/blog")
 public class BlogController {
 	
-	private BlogService blogService;
-	@RequestMapping("/list")
-   public String main(@RequestParam(value="userNo", required=true, defaultValue="") long no,Model model){
-		System.out.println(no);
-		List<PostVo> list =blogService.list(no);
+@Autowired
+   private BlogService blogService;
+	
+   @RequestMapping("/list")
+   public String main(@ModelAttribute PostVo vo ,Model model){
+		System.out.println(vo);
+		List<PostVo> list=blogService.list(vo);
 		model.addAttribute("list", list);
 		return "/blog/main";
    }
-   
+	
+	
    @RequestMapping("/maindetail")
    public String maindetail(){
       return "/blog/main-detail";

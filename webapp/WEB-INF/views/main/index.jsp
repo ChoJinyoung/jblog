@@ -25,7 +25,7 @@
 					<c:otherwise>
 						<a href="/jblog/main/logout"><strong>로그아웃</strong></a> 
 						&nbsp;&nbsp;
-						<a href="/jblog/blog/list?no=${vo.userNo }"><strong>내 블로그 가기</strong></a> 
+						<a href="/jblog/blog/list?userNo=${vo.userNo }"><strong>내 블로그 가기</strong></a> 
 						&nbsp;&nbsp;
 						<c:if test="${vo.role == 'Admin'}">
 							<a href="/jblog/main/userlistform"><strong>관리자</strong></a>&nbsp;&nbsp;

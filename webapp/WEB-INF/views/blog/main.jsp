@@ -27,8 +27,8 @@ language="java" contentType="text/html; charset=UTF-8"
 			      	<!-- 포스트 시작 -->
 			      	<table class="singlepost">
 			      	<c:forEach items='${list }' var='vo' varStatus="status">
-			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail">${vo.title }</a></td></tr>
-			      		<tr><td class="postdate">[${vo.createdDate }] &&${vo.content }, 덧글 1</td></tr>
+			      		<tr><td class="posttitle"><a href="/jblog/blog/maindetail"> ${vo.title } </a></td></tr>
+			      		<tr><td class="postdate"> ${vo.modifiedDate } , 덧글 1</td></tr>
 			      	</c:forEach>
 			      	</table>
 			      	<!-- 포스트 끝-->      	
