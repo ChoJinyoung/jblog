@@ -18,12 +18,12 @@ public class BlogService {
 	private BlogDao blogDao;
 
 	public List<PostVo> list(PostVo vo) {
-		System.out.println("@Service + " + vo);
 		List<PostVo> list = postDao.list(vo);
 		return list;
 	}
 
 	public BlogVo settingDone(BlogVo vo) {
+		System.out.println("settingDone+ " + vo);
 		BlogVo blogVo = blogDao.select(vo);
 		return blogVo;
 	}

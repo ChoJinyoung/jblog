@@ -39,7 +39,8 @@
 					size="50"> <input type="submit" value="검색"></td>
 			</tr>
 			<tr>
-				<td height="20" class="tdcontent"><input type="radio"
+				<td height="20" class="tdcontent">
+				<input type="radio"
 					name="searchCondition" checked>블로그 제목 &nbsp;&nbsp; <input
 					type="radio" name="searchCondition">태그 &nbsp;&nbsp; <input
 					type="radio" name="searchCondition">블로거</td>

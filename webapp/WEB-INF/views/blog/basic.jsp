@@ -10,9 +10,9 @@
 <body class="jblog">
 	<div class="continer">
 		<div class="head">
-			<h1 class="blogtitle">J2EE 이야기</h1>
+			<h1 class="blogtitle">${vo.title }</h1>
 			<p class="blogtag">
-				자바, 컨퍼런스, java
+				${vo.tag}
 			</p>
 			<ul>
 		      <li><a href="">로그아웃</a></li>
@@ -39,7 +39,8 @@
 	      	<td height="10">&nbsp;</td>
 	      	<td>
 	      	
-	      	<!-- 작업 화면  시작 -->           	
+	      	<!-- 작업 화면  시작 -->    
+	      	<form id="basic-form" method="post" action="/jblog/blog/basic">       	
 	      	<table>
 	      		<tr>
 	      			<td width="150" class="inputlabel">블로그 제목 :</td>
@@ -63,6 +64,8 @@
 	      			<input type="submit" value="찾아보기"></td>      			
 	      		</tr>           		
 	      	</table>
+	      	<input class="modifybutton" type="submit" value="완료">
+	      	</form>
 	      	<!-- 작업 화면  끝 -->  
 	      	         	      	
 	      	</td>

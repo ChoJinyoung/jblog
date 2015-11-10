@@ -11,6 +11,8 @@ a.title:visited,
 a.title:active 		{ font-size:9pt; color:#696969; text-decoration:none }
 a.title:hover 		{ font-size:9pt; color:#dc143c; text-decoration:none }
 
+.modifybutton		{ margin-left:160px; margin-top: 20px}
+
 .td					{ background-color:#FFFFFF;}
 .tdcontent			{ height:10px; }
 .tdcontentcenter	{ background-color:#FFFFFF; font-size:9pt; font-family:"Tahoma"; height:10px;text-align:center; }
@@ -32,6 +34,7 @@ a.title:hover 		{ font-size:9pt; color:#dc143c; text-decoration:none }
 .inputlabel			{ font-size:9pt;font-weight: bold;height:24px;text-align:right; }
 .inputtext			{ font-size:9pt;height:18px;margin-left:5px; }
 .inputtextarea  	{ font-size:9pt;margin-left:5px; }
+
 
 .tablelabel			{ font-size:9pt; font-weight: bold; height:24px; text-align:center; }
 .tablecontent		{ height:20px; }

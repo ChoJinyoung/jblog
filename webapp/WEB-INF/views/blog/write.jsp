@@ -25,7 +25,7 @@
 	      	<td height="10" width="20">&nbsp;</td>
 	      	<td width="530" valign="top" class="tdcontent">
 		      	<!-- 메뉴 시작 -->     
-		      	<a class="title" href="/jblog/blog/basic">기본설정</a>
+		      	<a class="title" href="/jblog/blog/basicform">기본설정</a>
 		      	&nbsp;&nbsp; 
 	    	  	<a class="title" href="/jblog/blog/category">카테고리</a>
 	    	  	&nbsp;&nbsp;

@@ -15,7 +15,6 @@ public class PostDao {
 	private SqlSession sqlSession;
 	
 	public List<PostVo> list(PostVo vo){
-		System.out.println("dao + " + vo);
 		List<PostVo> list=sqlSession.selectList("post.list", vo);
 		return list;
 	}

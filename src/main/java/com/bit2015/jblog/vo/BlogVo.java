@@ -1,7 +1,8 @@
 package com.bit2015.jblog.vo;
 
 public class BlogVo {
-
+	
+	private long userNo;
 	private long blogNo;
 	private String title;
 	private String tag;
@@ -45,12 +46,19 @@ public class BlogVo {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	
+
+	public long getUserNo() {
+		return userNo;
+	}
+	public void setUserNo(long userNo) {
+		this.userNo = userNo;
+	}
 	@Override
 	public String toString() {
-		return "BlogVo [blogNo=" + blogNo + ", title=" + title + ", tag=" + tag
-				+ ", cntDisplayPost=" + cntDisplayPost + ", status=" + status
-				+ ", fileName=" + fileName + "]";
+		return "BlogVo [userNo=" + userNo + ", blogNo=" + blogNo + ", title="
+				+ title + ", tag=" + tag + ", cntDisplayPost=" + cntDisplayPost
+				+ ", status=" + status + ", fileName=" + fileName + "]";
 	}
-
+	
+	
 }
