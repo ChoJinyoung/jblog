@@ -41,7 +41,7 @@ language="java" contentType="text/html; charset=UTF-8"
 		      			<td>
 				      		<a href="/toLogin">로그인</a>&nbsp;&nbsp;
 				      		<a href="/logout">로그아웃</a>&nbsp;&nbsp;
-		   					<a href="/jblog/blog/basicform?userNo=">블로그 관리</a>
+		   					<a href="/jblog/blog/basicform?userNo=${vo.userNo }">블로그 관리</a>
 			      		</td>
 			      	</tr>
 		      		<tr><td height="5px">&nbsp;</td></tr>

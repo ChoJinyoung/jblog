@@ -13,7 +13,6 @@
 </head>
 <body>
 	<h1 class="s-logo">jBlog</h1>
-	<form action="#">
 		<table class="main-tbl">
 			<tr>
 				<td height="30">				
@@ -46,6 +45,5 @@
 					type="radio" name="searchCondition">블로거</td>
 			</tr>
 		</table>
-	</form>
 </body>
 </html>

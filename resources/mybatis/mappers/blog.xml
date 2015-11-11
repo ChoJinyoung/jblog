@@ -3,14 +3,15 @@
 
 <mapper namespace="blog">
    <select id="blogsetting" parameterType="BlogVo"  resultType="BlogVo">
-     select  B.user_no as userNo, 
-			 A.blog_no as blogNo, 
+     select  A.blog_no as blogNo, 
         	 A.title,
         	 A.tag,
         	 A.cnt_display_post as cntDisplayPost,
         	 A.status,
         	 A.file_name as fileName   
   	 from  	 blog A, BLOG_USER B   
-  	 where B.user_no=A.blog_no    
+  	 where   B.user_no=A.blog_no    
    </select>
+   
+   
 </mapper>

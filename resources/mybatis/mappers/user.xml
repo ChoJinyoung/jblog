@@ -25,7 +25,7 @@
    </select>
    
    
-   <select id="getByRole" resultType="String">
+   <select id="getByUserNo" resultType="BlogUserVo" parameterType="long">
    	  select
    user_no as userNo, 
          user_id as userId, 
@@ -33,7 +33,7 @@
          password,
          role
    from   blog_user
-   where role=#{role }
+   where user_no=#{userNo }
    </select>
    
 </mapper>

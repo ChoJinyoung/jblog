@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bit2015.jblog.dao.BlogDao;
+import com.bit2015.jblog.dao.BlogUserDao;
 import com.bit2015.jblog.dao.PostDao;
 import com.bit2015.jblog.vo.BlogVo;
 import com.bit2015.jblog.vo.PostVo;
@@ -16,14 +17,16 @@ public class BlogService {
 	private PostDao postDao;
 	@Autowired
 	private BlogDao blogDao;
+	@Autowired
+	private BlogUserDao blogUserDao;
 
 	public List<PostVo> list(PostVo vo) {
+		
 		List<PostVo> list = postDao.list(vo);
 		return list;
 	}
 
 	public BlogVo settingDone(BlogVo vo) {
-		System.out.println("settingDone+ " + vo);
 		BlogVo blogVo = blogDao.select(vo);
 		return blogVo;
 	}
