@@ -6,6 +6,7 @@ public class CategoryVo {
 	private long categoryName;
 	private String displayType;
 	private String description;
+	private long cntDisplayPost;
 	private String createdDate;
 	private String modifiedDate;
 	public long getBlogNo() {
@@ -50,14 +51,22 @@ public class CategoryVo {
 	public void setModifiedDate(String modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
+	public long getCntDisplayPost() {
+		return cntDisplayPost;
+	}
+	public void setCntDisplayPost(long cntDisplayPost) {
+		this.cntDisplayPost = cntDisplayPost;
+	}
 	@Override
 	public String toString() {
 		return "CategoryVo [blogNo=" + blogNo + ", categoryNo=" + categoryNo
 				+ ", categoryName=" + categoryName + ", displayType="
 				+ displayType + ", description=" + description
-				+ ", createdDate=" + createdDate + ", modifiedDate="
-				+ modifiedDate + "]";
+				+ ", cntDisplayPost=" + cntDisplayPost + ", createdDate="
+				+ createdDate + ", modifiedDate=" + modifiedDate + "]";
 	}
+	
+	
 	
 	
 }
