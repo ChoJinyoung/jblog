@@ -3,7 +3,7 @@ package com.bit2015.jblog.vo;
 public class CategoryVo {
 	private long blogNo;
 	private long categoryNo;
-	private long categoryName;
+	private String categoryName;
 	private String displayType;
 	private String description;
 	private long cntDisplayPost;
@@ -21,10 +21,11 @@ public class CategoryVo {
 	public void setCategoryNo(long categoryNo) {
 		this.categoryNo = categoryNo;
 	}
-	public long getCategoryName() {
+	
+	public String getCategoryName() {
 		return categoryName;
 	}
-	public void setCategoryName(long categoryName) {
+	public void setCategoryName(String categoryName) {
 		this.categoryName = categoryName;
 	}
 	public String getDisplayType() {
@@ -65,8 +66,4 @@ public class CategoryVo {
 				+ ", cntDisplayPost=" + cntDisplayPost + ", createdDate="
 				+ createdDate + ", modifiedDate=" + modifiedDate + "]";
 	}
-	
-	
-	
-	
 }

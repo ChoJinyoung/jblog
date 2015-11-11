@@ -16,7 +16,7 @@
 			</p>
 			<ul>
 		      <li><a href="">로그아웃</a></li>
-		      <li><a href="/jblog/blog/">내 블로그 가기</a></li>
+		      <li><a href="/jblog/blog/list">내 블로그 가기</a></li>
 		    </ul>  
 		</div>
 	    <table class="content">
@@ -27,7 +27,7 @@
 		      	<!-- 메뉴 시작 -->     
 		      	<a class="title" href="/jblog/blog/basicform">기본설정</a>
 		      	&nbsp;&nbsp; 
-	    	  	<a class="title" href="/jblog/blog/category">카테고리</a>
+	    	  	<a class="title" href="/jblog/blog/categoryform">카테고리</a>
 	    	  	&nbsp;&nbsp;
 	      		<strong>글작성</strong>
 	      		&nbsp;&nbsp;

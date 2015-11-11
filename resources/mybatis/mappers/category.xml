@@ -3,10 +3,36 @@
 
 <mapper namespace="category">
 	<select id="list"  resultType="CategoryVo">
-		select user_no as userNo,user_id as userId,user_name as userName,
-			   role,password,created_date as createdDate,modified_date as modifiedDate
-		from blog a, user b,category c
-		order by created_date desc
+		select 
+		a.blog_no as blogNo,
+		b.category_no as categoryNo,
+		b.category_name as categoryName,
+		b.display_type as displayType,
+		b.cnt_display_post as cntDisplayPost,
+		b.description,
+		TO_CHAR(b.MODIFIED_DATE,'yyyy/mm/dd') AS modifiedDate
+		from blog a,category b
+		order by modified_date desc
 	</select>
-   
+	
+	<select id="select" resultType="CategoryVo" parameterType="CategoryVo">
+		select
+		blog_no as blogNo,
+		category_no as categoryNo,
+		category_name as categoryName,
+		display_type as displayType,
+		description,
+		cnt_display_post as cntDisplayPost
+		from category
+		where blog_no=${blogNo }
+	</select>
+	
+	<insert id="insert" parameterType="CategoryVo">
+		<selectKey keyProperty="categoryNo" resultType="long" order="BEFORE">
+			select category_seq.nextval from dual
+		</selectKey>
+		insert
+		into category
+		values ( #{blogNo},#{categoryNo }, #{categoryName }, #{displayType }, #{cntDisplayPost},#{description}, SYSDATE,sysdate )
+	</insert>
 </mapper>
