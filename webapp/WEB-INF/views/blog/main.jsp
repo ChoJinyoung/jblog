@@ -42,7 +42,7 @@ language="java" contentType="text/html; charset=UTF-8"
 				      		<a href="/toLogin">로그인</a>&nbsp;&nbsp;
 				      		<a href="/logout">로그아웃</a>&nbsp;&nbsp;
 				      		<c:forEach items='${list }' var='vo' varStatus="status">
-		   						<a href="/jblog/blog/basicform?userNo=${vo.userNo }">블로그 관리</a>
+		   						<a href="/jblog/blog/basicform?userNo=${vo.userNo }&&blogNo=${vo.blogNo}">블로그 관리</a>
 		   					</c:forEach>
 			      		</td>
 			      	</tr>

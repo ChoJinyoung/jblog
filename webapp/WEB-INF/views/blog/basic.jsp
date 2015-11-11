@@ -16,7 +16,7 @@
 			</p>
 			<ul>
 		      <li><a href="">로그아웃</a></li>
-		      <li><a href="/jblog/blog/">내 블로그 가기</a></li>
+		      <li><a href="/jblog/blog/list">내 블로그 가기</a></li>
 		    </ul>  
 		</div>
 	    <table class="content">
@@ -27,7 +27,7 @@
 		      	<!-- 메뉴 시작 -->     
 		      	<strong>기본설정</strong>
 		      	&nbsp;&nbsp; 
-	    	  	<a class="title" href="/jblog/blog/category">카테고리</a>
+	    	  <a class="title" href="/jblog/blog/categoryform?blogNo=${vo.blogNo }">카테고리</a>
 	    	  	&nbsp;&nbsp;
 	      		<a class="title" href="/jblog/blog/writeform">글작성</a>
 	      		&nbsp;&nbsp;
@@ -40,19 +40,21 @@
 	      	<td>
 	      	
 	      	<!-- 작업 화면  시작 -->    
-	      	<form id="basic-form" method="post" action="/jblog/blog/basic">       	
+	      	<form id="basic-form" method="post" action="/jblog/blog/basic"> 
+	      	<input type="hidden" name="userNo" value="${vo.userNo}">  
+			<input type="hidden" name="blogNo" value="${vo.blogNo}">	
 	      	<table>
 	      		<tr>
 	      			<td width="150" class="inputlabel">블로그 제목 :</td>
-	      			<td><input class="inputtext" type="text" size="40" name="title"></td>
+	      			<td><input placeholder="${vo.title}" class="inputtext" type="text" size="40" name="title"></td>
 	      		</tr>
 	      		<tr>
 	      			<td width="150" class="inputlabel">블로그 태그 :</td>
-	      			<td><input class="inputtext" type="text" size="50" name="tag"></td>
+	      			<td><input placeholder="${vo.tag}" class="inputtext" type="text" size="50" name="tag"></td>
 	      		</tr>
 	      		<tr>
 	      			<td width="150" class="inputlabel">메인페이지 포스트  :</td>
-	      			<td><input class="inputtext" type="text" size="4" name="cntDisplayPost"></td>      			
+	      			<td><input placeholder="${vo.cntDisplayPost}" class="inputtext" type="text" size="4" name="cntDisplayPost"></td>      			
 	      		</tr>
 	      		<tr>
 	      			<td width="150" class="inputlabel">로고이미지  :</td>
@@ -60,7 +62,7 @@
 	      		</tr>      		
 	      		<tr>
 	      			<td width="150" class="inputlabel">&nbsp;</td>
-	      			<td><input class="inputtext" type="text" size="40" name="logoFile">
+	      			<td><input placeholder="${vo.fileName}" class="inputtext" type="text" size="40" name="fileName">
 	      			<input type="submit" value="찾아보기"></td>      			
 	      		</tr>           		
 	      	</table>

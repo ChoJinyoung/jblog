@@ -4,7 +4,9 @@
 <mapper namespace="post">
 
 	<select id="list" parameterType="PostVo" resultType="PostVo">
-		select userNo,
+		select 
+		blogNo,
+		userNo,
 		userName,
 		TO_CHAR(D.MODIFIED_DATE,'yyyy/mm/dd') AS modifiedDate,
 		D.POST_NO as postNo,

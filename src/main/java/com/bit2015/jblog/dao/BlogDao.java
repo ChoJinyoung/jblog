@@ -13,9 +13,12 @@ public class BlogDao {
 	SqlSession sqlsession;
 
 	public BlogVo select(BlogVo vo) {
-		System.out.println(vo);
 		BlogVo blogVo = sqlsession.selectOne("blog.blogsetting", vo);
 		return blogVo;
+	}
+	
+	public void update(BlogVo vo){
+		sqlsession.update("blog.updateByUserNo", vo);
 	}
 
 }

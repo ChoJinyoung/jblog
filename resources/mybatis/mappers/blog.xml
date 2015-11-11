@@ -13,5 +13,12 @@
   	 where   B.user_no=A.blog_no    
    </select>
    
+   <update id="updateByUserNo" parameterType="BlogVo">
+   	update BLOG set TITLE = #{title}, 
+   				    TAG = #{tag},  
+   				    CNT_DISPLAY_POST = #{cntDisplayPost},  
+   				    FILE_NAME = #{fileName}
+	where BLOG_NO = #{blogNo}   
+   </update>
    
 </mapper>
