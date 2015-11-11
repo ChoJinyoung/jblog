@@ -22,6 +22,7 @@ public class BlogController {
    @RequestMapping("/list")
    public String main(@ModelAttribute PostVo vo ,Model model){
 	   List<PostVo> list=blogService.list(vo);
+	   System.out.println(list);
 		model.addAttribute("list", list);
 		return "/blog/main";
    }

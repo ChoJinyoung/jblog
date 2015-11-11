@@ -4,21 +4,22 @@
 <mapper namespace="post">
 
 	<select id="list" parameterType="PostVo" resultType="PostVo">
-	select    userName,
-         TO_CHAR(D.MODIFIED_DATE,'yyyy/mm/dd') AS modifiedDate,
-      D.POST_NO as postNo, 
-      D.TITLE 
-      from 
-      (select A.*, B.CATEGORY_NO
-         from 
-         (select b.BLOG_NO as blogNo, a.USER_NAME as userName
-               from blog_user a, blog b 
-               where a.USER_NO = b.BLOG_NO) A, CATEGORY B 
-               WHERE blogNo = B.BLOG_NO AND B.CATEGORY_NO = #{userNo}) C, POST D 
-               WHERE C.CATEGORY_NO = D.CATEGORY_NO
+		select userNo,
+		userName,
+		TO_CHAR(D.MODIFIED_DATE,'yyyy/mm/dd') AS modifiedDate,
+		D.POST_NO as postNo,
+		D.TITLE
+		from
+		(select A.*, B.CATEGORY_NO
+		from
+		(select b.BLOG_NO as blogNo, a.USER_NAME as userName, a.USER_NO as userNo
+		from blog_user a, blog b
+		where a.USER_NO = b.BLOG_NO) A, CATEGORY B
+		WHERE blogNo = B.BLOG_NO AND B.CATEGORY_NO = 1) C, POST D
+		WHERE C.CATEGORY_NO = D.CATEGORY_NO
 	</select>
-	
+
 	<insert id="">
-		
+
 	</insert>
 </mapper>

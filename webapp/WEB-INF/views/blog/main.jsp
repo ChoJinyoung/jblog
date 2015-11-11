@@ -41,7 +41,9 @@ language="java" contentType="text/html; charset=UTF-8"
 		      			<td>
 				      		<a href="/toLogin">로그인</a>&nbsp;&nbsp;
 				      		<a href="/logout">로그아웃</a>&nbsp;&nbsp;
-		   					<a href="/jblog/blog/basicform?userNo=${vo.userNo }">블로그 관리</a>
+				      		<c:forEach items='${list }' var='vo' varStatus="status">
+		   						<a href="/jblog/blog/basicform?userNo=${vo.userNo }">블로그 관리</a>
+		   					</c:forEach>
 			      		</td>
 			      	</tr>
 		      		<tr><td height="5px">&nbsp;</td></tr>
